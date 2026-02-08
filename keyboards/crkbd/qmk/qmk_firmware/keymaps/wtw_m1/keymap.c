@@ -75,9 +75,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [L_MOUSE] = LAYOUT_split_3x6_3_ex2(
   //,--------------------------------------------------------------.  ,--------------------------------------------------------------.
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_COPY,    KC_VOLU, KC_AGIN, KC_PSTE, KC_COPY,  KC_CUT, KC_UNDO, XXXXXXX,
+      XXXXXXX, RM_TOGG, RM_NEXT, XXXXXXX, XXXXXXX, XXXXXXX, KC_COPY,    KC_VOLU, KC_AGIN, KC_PSTE, KC_COPY,  KC_CUT, KC_UNDO, RM_TOGG,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-      XXXXXXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX, KC_PSTE,    KC_VOLD, XXXXXXX, MS_LEFT, MS_DOWN,   MS_UP, MS_RGHT, XXXXXXX,
+      XXXXXXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX, KC_PSTE,    KC_VOLD, XXXXXXX, MS_LEFT, MS_DOWN,   MS_UP, MS_RGHT, RM_NEXT,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, MS_WHLL, MS_WHLD, MS_WHLU, MS_WHLR, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
@@ -147,9 +147,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [L_MOUSE] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_AGIN, KC_PSTE, KC_COPY,  KC_CUT, KC_UNDO, XXXXXXX,
+      XXXXXXX, RM_TOGG, RM_NEXT, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_AGIN, KC_PSTE, KC_COPY,  KC_CUT, KC_UNDO, RM_TOGG,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,                      XXXXXXX, MS_LEFT, MS_DOWN,   MS_UP, MS_RGHT, XXXXXXX,
+      XXXXXXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,                      XXXXXXX, MS_LEFT, MS_DOWN,   MS_UP, MS_RGHT, RM_NEXT,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, MS_WHLL, MS_WHLD, MS_WHLU, MS_WHLR, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
