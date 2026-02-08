@@ -1,0 +1,22 @@
+#!/bin/bash
+
+USER=$(whoami)
+USER_ID=$(id -u)
+USER_PASS=$(openssl passwd -1 passpass)
+DIR=kbd_firmware
+
+export USER
+export USER_ID
+export USER_PASS
+export DIR
+
+case $1 in
+    init)
+        echo 'init'ls 
+        docker compose pull
+        docker compose build
+        ;;
+    run)
+        docker compose run --rm kbd_firmware bash
+        ;;
+esac

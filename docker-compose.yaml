@@ -1,0 +1,18 @@
+---
+x-user-args: &user-args
+  USER: '${USER}'
+  USER_ID: '${USER_ID}'
+  USER_PASS: '${USER_PASS}'
+  DIR: '${DIR}'
+
+services:
+  kbd_firmware:
+    container_name: kbd_firmware
+    restart: "no"
+    build:
+      context: .
+      args:
+        <<: *user-args
+    volumes:
+      - './:/home/${USER}/${DIR}'
+      - '~/.ssh:/home/${USER}/.ssh:ro'
