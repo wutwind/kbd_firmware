@@ -1,0 +1,188 @@
+layout:
+  qmk_keyboard: corne_rotated
+  layout_name: LAYOUT_split_3x6_3
+layers:
+  BASE:
+    - [
+        "`",Q, W, E, R, T,
+        Y, U, I, O, P,"]"
+      ]
+    - [
+        {t: Tab },{h: LGui, t: A}, {h: LAlt, t: S}, {h: LCtrl, t: D}, {h: LShift, t: F}, G,
+        H, {h: RShift, t: J}, {h: RCtrl, t: K}, {h: RAlt, t: L}, {h: RGui, t: ";"},"'"
+      ]
+    - [
+        Esc,{t: Z, h: BTN}, X, C, V, B,
+        N, M, ",", ., {t: "/", h: BTN},"["
+      ]
+    - {t: Del, h: MEDIA}
+    - {t: BSpace, h: NAV}
+    - {t: Tab, h: MOUSE}
+    - {t: Enter, h: SYMB}
+    - {t: Space, h: NUM}
+    - {t:  Esc, h: FUNC}
+
+  NUM:
+    - [
+        "",{t: "[", s: "{"},{t: "7", s: "&"},{t: "8", s: "*"},{t: "9", s: "("},{t: "]", s: "}"},
+        "","","","","","",
+      ]
+    - [
+        "",{t: ";", s: ":"},{t: "4", s: "$"},{t: "5", s: "%"},{t: "6", s: "^"},{t: "=", s: "+"},
+        "", RShift, RCtrl, RAlt, RGui,""
+      ]
+    - [
+        "",{t: "`", s: "~"},{t: "1", s: "!"},{t: "2", s: "@"},{t: "3", s: "#"},{t: "\\", s: "|"},
+        "","","","","","",
+      ]
+    - {t: ".", s: ">"}
+    - {t: "0", s: ")"}
+    - {t: "-", s: "_"}
+    - null
+    - {type: held}
+    - null
+
+  SYMB:
+    - [
+        "","{","&","*","(","}",
+        "","","","","","",
+      ]
+    - [
+        "",":","$","%","^","+",
+        "", RShift, RCtrl, RAlt, RGui,""
+      ]
+    - [
+        "","~","!","@","#","|",
+        "","","","","","",
+      ]
+    - "("
+    - ")"
+    - "_"
+    - {type: held}
+    - null
+    - null
+
+  FUNC:
+    - [
+        "","F12","F7","F8","F9","PrScr",
+        "","","","","","",
+      ]
+    - [
+        "","F11","F4","F5","F6","ScrLk",
+        "", RShift, RCtrl, RAlt, RGui,""
+      ]
+    - [
+        "","F10","F1","F2","F3","Pause",
+        "","","","","","",
+      ]
+    - "CtxMenu"
+    - Space
+    - Tab
+    - null
+    - null
+    - {type: held}
+
+  NAV:
+    - [
+        "","","","","","",
+        Redo, Paste, Copy, Cut, Undo,""
+      ]
+    - [
+        "",LGui,LAlt,LCtl,LShift,"",
+        Caps, Left, Down, Up, Right,""
+      ]
+    - [
+        "","","","","","",
+        Ins, Home, PgDown, PgUp, End,""
+      ]
+    - null
+    - {type: held}
+    - null
+    - Enter
+    - BSpace
+    - Del
+
+  MOUSE:
+    - [
+        "","","","","","",
+        Redo, Paste, Copy, Cut, Undo,""
+      ]
+    - [
+        "",LGui,LAlt,LCtl,LShift,"",
+        "", MLeft, MDown, MUp, MRight,""
+      ]
+    - [
+        "","","","","","",
+        "", WLeft, WDown, WUp, WRight,""
+      ]
+    - null
+    - null
+    - {type: held}
+    - MBtn2
+    - MBtn1
+    - MBtn3
+
+  MEDIA:
+    - [
+        "","","","","","",
+        Redo, Paste, Copy, Cut, Undo,""
+      ]
+    - [
+        "",LGui,LAlt,LCtl,LShift,"",
+        "", Prev, VolDn, VolUp, Next,""
+      ]
+    - [
+        "","","","","","",
+        "","","","","","",
+      ]
+    - {type: held}
+    - null
+    - null
+    - Stop
+    - Play
+    - Mute
+
+  BTN:
+    - [
+        "",Undo,Cut,Copy,Paste,Redo,
+        Redo, Paste, Copy, Cut, Undo,""
+      ]
+    - [
+        "",LGui,LAlt,LCtl,LShift,"",
+        "", RShift, RCtrl, RAlt, RGui,""
+      ]
+    - [
+        "",{t: Undo, type: ghost},Cut,Copy,Paste,Redo,
+        Redo, Paste, Copy, Cut, {t: Undo, type: ghost},""
+      ]
+    - MBtn3
+    - MBtn1
+    - MBtn2
+    - MBtn2
+    - MBtn1
+    - MBtn3
+
+combos:
+  - {p: [4,5], k: "(", l: ["BASE"]}
+  - {p: [6,7], k: ")", l: ["BASE"]}
+  - {p: [16,17], k: "[", l: ["BASE"]}
+  - {p: [18,19], k: "]", l: ["BASE"]}
+  - {p: [28,29], k: "{", l: ["BASE"]}
+  - {p: [30,31], k: "}", l: ["BASE"]}
+
+  - {p: [7,8], k: "'", l: ["BASE"]}
+  - {p: [8,9], k: "\"", l: ["BASE"]}
+  - {p: [7,9], k: "`", l: ["BASE"], a: top, o: 1.2 }
+  - {p: [7,8,9], k: "~", l: ["BASE"], a: top, o: 0.5}
+
+  - {p: [2,3], k: "+", l: ["BASE"]}
+  - {p: [3,4], k: "-", l: ["BASE"]}
+  - {p: [2,4], k: "_", l: ["BASE"], a: top, o: 1.2}
+  - {p: [2,3,4], k: "=", l: ["BASE"], a: top, o: 0.5}
+
+  - {p: [4,16], k: "#", l: ["BASE"]}
+  - {p: [5,17], k: "!", l: ["BASE"]}
+  - {p: [17,29], k: "*", l: ["BASE"]}
+  - {p: [6,18], k: "&", l: ["BASE"]}
+  - {p: [7,19], k: "$", l: ["BASE"]}
+  - {p: [18,30], k: "@", l: ["BASE"]}
